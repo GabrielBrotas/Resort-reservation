@@ -1,25 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+
+import {Route, Switch} from 'react-router-dom'
+// componentes
+import Navbar from './componentes/Navbar'
+// pages
+import Home from './pages/Home'
+import Rooms from './pages/Rooms'
+import SingleRoom from './pages/SingleRoom'
+import Error from './pages/Error'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // O Switch serve para caso a url não esteja em nenhuma das Route ela vai renderizar a Error
+    <>
+    <Navbar />
+    
+    <Switch>
+      <Route path="/rooms/:slug" component={SingleRoom} />
+      <Route path="/rooms" component={Rooms} />
+      <Route exact path="/" component={Home} />
+
+      <Route component={Error}/>
+    </Switch>
+      
+    </>
   );
 }
 
