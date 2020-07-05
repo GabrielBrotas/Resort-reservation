@@ -7,6 +7,7 @@ import Banner from '../componentes/Banner'
 import Services from '../componentes/Services'
 import FeturedRooms from '../componentes/FeaturedRooms'
 
+
 const Home = () => {
     return (
         <>
@@ -19,6 +20,7 @@ const Home = () => {
         </Hero>
         <Services />
         <FeturedRooms />
+
         </>
     )
 }
