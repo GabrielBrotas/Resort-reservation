@@ -16,7 +16,6 @@ class RoomProvider extends Component {
         loading: true,
     }
 
-    // getData{ } 
 
     // pegar os items(quartos) quando renderizar a tela
     componentDidMount(){
@@ -30,6 +29,7 @@ class RoomProvider extends Component {
             loading: false
         })
     }
+
 
     // formatar os quartos
     formatData(items) {
@@ -47,10 +47,19 @@ class RoomProvider extends Component {
         return tempItems
     }
 
+
+    // passar o room de acordo com a url
+    getRoom = (slug) => {
+        let tempRooms = [...this.state.rooms];
+        const room = tempRooms.find((room => room.slug === slug))
+        return room;
+    }
+
+
     render() {
         return (
             // value é o valor que vai ser passado para os consumer, nesse caso estamos passando nosso state
-            <RoomContext.Provider value={{...this.state}}>
+            <RoomContext.Provider value={{...this.state, getRoom: this.getRoom}}>
                 {this.props.children}
             </RoomContext.Provider>
         )
