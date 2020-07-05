@@ -6,14 +6,17 @@ import {FaAlignRight} from 'react-icons/fa'
 
 
 export default class Navbar extends Component {
+    // estado da navbar
     state={
         isOpen: false
     }
 
+    // quando clicar mudar o estado
     handleToggle = () => {
         this.setState({isOpen: !this.state.isOpen})
     }
 
+    
     render() {
         return (
             <nav className="navbar">

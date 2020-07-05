@@ -12,10 +12,12 @@ import Error from './pages/Error'
 
 function App() {
   return (
-    // O Switch serve para caso a url não esteja em nenhuma das Route ela vai renderizar a Error
-    <>
-    <Navbar />
     
+    <>
+    {/* Navbar vai ficar em todas as screens */}
+    <Navbar />
+
+    {/* O Switch serve para caso a url não esteja em nenhuma das Route ela vai renderizar a Error */}
     <Switch>
       <Route path="/rooms/:slug" component={SingleRoom} />
       <Route path="/rooms" component={Rooms} />

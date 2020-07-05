@@ -4,11 +4,17 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import {BrowserRouter as Router} from 'react-router-dom'
+import{RoomProvider} from './context'
+
 
 ReactDOM.render(
-  <Router>
-    <App />
-  </Router>
+  // Provider para disponibilizar para todo o app a contextAPI
+  <RoomProvider>
+    {/* Router para disponibilizar as rotas para todo o App */}
+    <Router>
+      <App />
+    </Router>
+  </RoomProvider>
   ,
   document.getElementById('root')
 );
