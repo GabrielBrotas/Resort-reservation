@@ -69,4 +69,14 @@ class RoomProvider extends Component {
 // consumidor
 const RoomConsumer = RoomContext.Consumer
 
+// passando o consumer para o componente dentro dessa função
+export function withRoomConsumer(Component) {
+    // as props vem do componente, pois quando retornar essa função vamos querer manter essas props
+    return props => {
+        // vai passar para o Component dentro de 'withRoomConsumer' todo o context passando pela props (context={value})
+        return <RoomConsumer>
+            {value => <Component {...props} context={value} />}
+        </RoomConsumer>
+    }
+}
 export {RoomProvider, RoomConsumer, RoomContext}

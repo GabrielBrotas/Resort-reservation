@@ -16,11 +16,13 @@ export default class SingleRoom extends Component {
         }
     }
 
-    // pegar os dados da Context
+    // disponibilizar os dados da Context para essa pagina
     static contextType = RoomContext
 
     render() {
+        // acessar os dados da context
         const {getRoom} = this.context;
+        
         const room = getRoom(this.state.slug)
 
         if(!room){
