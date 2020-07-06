@@ -55,21 +55,21 @@ export default class SingleRoom extends Component {
                 </div>
                 <div className="single-room-info">
                     <article className="desc">
-                        <h3>Details</h3>
+                        <h3>Detalhes</h3>
                         <p>{description}</p>
                     </article>
                     <article className="info"> 
-                        <h3>info</h3>
-                        <h6>price: ${price}</h6>
-                        <h6>size: ${size}</h6>
+                        <h3>informações</h3>
+                        <h6>preço: R${price}</h6>
+                        <h6>tamanho: ${size}</h6>
                         <h6>
-                            max capacity: {
-                                capacity > 1 ? `${capacity} people` :
-                                `${capacity} person` 
+                            capacidade maxima: {
+                                capacity > 1 ? `${capacity} pessoa` :
+                                `${capacity} pessoas` 
                             }
                         </h6>
                         <h6>
-                            {pets ? "pets allowed" : "no pets allowed"}
+                            {pets ? "Animais permitidos" : "Animais não permitido"}
                         </h6>
                         <h6>{breakfast && "free breakfast included"}</h6>
                     </article>
