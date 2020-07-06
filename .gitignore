@@ -2,6 +2,7 @@
 
 /src/images/*
 !/src/images/.gitkeep
+.env
 
 # dependencies
 /node_modules
