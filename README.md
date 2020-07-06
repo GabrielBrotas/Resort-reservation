@@ -14,7 +14,7 @@
   ## Photos
   
   ### Home 
-   <img src="githubimages/landingpage.JPG" alt="image" width="700px"/>
+   <img src="githubimages/langindpage.JPG" alt="image" width="700px"/>
   
   ### Home - Services
    <img src="githubimages/homeservices.JPG" alt="image" width="700px"/>
