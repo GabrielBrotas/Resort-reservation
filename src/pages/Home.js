@@ -12,9 +12,9 @@ const Home = () => {
     return (
         <>
         <Hero>
-            <Banner title="luxurious rooms" subtitle="deluxe rooms starting at $299">
+            <Banner title="Pousadas de Luxo" subtitle="Quartos de luxo a partir de R$299">
                 <Link to="/rooms" className="btn-primary">
-                    Our Rooms
+                    Nossos quartos
                 </Link>
             </Banner>
         </Hero>

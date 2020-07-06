@@ -23,7 +23,7 @@ export default class FeaturedRooms extends Component {
         return (
             <section className="featured-rooms">
             
-                <Title title="featured rooms" />
+                <Title title="Quartos em destaque" />
                 <div className="featured-rooms-center">
                     {/* se estiver carregando mostrar o gif quando terminar mostrar os quartos */}
                     {loading ? <Loading /> : rooms}

@@ -7,22 +7,22 @@ export default class Services extends Component {
         services: [
             {
                 icon: <FaCocktail />,
-                title: "Free cocketails",
+                title: "Coquetéis Grátis",
                 info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus doloribus reprehenderit accusantium necessitatibus doloremque. Illo possimus natus sapiente aliquid tempore ducimus, maiores reprehenderit consectetur? Distinctio molestiae necessitatibus esse et beatae?"
             },
             {
                 icon: <FaHiking />,
-                title: "Endless Hiking",
+                title: "Caminhadas",
                 info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus doloribus reprehenderit accusantium necessitatibus doloremque. Illo possimus natus sapiente aliquid tempore ducimus, maiores reprehenderit consectetur? Distinctio molestiae necessitatibus esse et beatae?"
             },
             {
                 icon: <FaShuttleVan />,
-                title: "Free shuttle",
+                title: "Transporte Gratuito",
                 info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus doloribus reprehenderit accusantium necessitatibus doloremque. Illo possimus natus sapiente aliquid tempore ducimus, maiores reprehenderit consectetur? Distinctio molestiae necessitatibus esse et beatae?"
             },
             {
                 icon: <FaBeer />,
-                title: "Strongest Beer",
+                title: "Cervejas Forte",
                 info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus doloribus reprehenderit accusantium necessitatibus doloremque. Illo possimus natus sapiente aliquid tempore ducimus, maiores reprehenderit consectetur? Distinctio molestiae necessitatibus esse et beatae?"
             },
         ]
@@ -30,7 +30,7 @@ export default class Services extends Component {
     render() {
         return (
             <section className="services">
-                <Title title="services" />
+                <Title title="Serviços" />
                 <div className="services-center">
                     {this.state.services.map( (item, index) => {
                         return <article key={index} className="service">

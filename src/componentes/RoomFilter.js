@@ -34,11 +34,11 @@ export default function RoomFilter({rooms}) {
 
     return (
         <section className="filter-container">
-            <Title title="search rooms" />
+            <Title title="Procurar quartos" />
             <form className="filter-form">
                 {/* select type */}
                 <div className="form-group">
-                    <label htmlFor="type">room type</label>
+                    <label htmlFor="type">Tipo</label>
                     <select name="type" id="type" value={type} className="form-control" onChange={handleChange}>
                         {types}
                     </select>
@@ -46,7 +46,7 @@ export default function RoomFilter({rooms}) {
                 {/* end select type */}
                 {/* guests */}
                 <div className="form-group">
-                    <label htmlFor="capacity">Guests</label>
+                    <label htmlFor="capacity">Convidados</label>
                     <select name="capacity" id="capacity" value={capacity} className="form-control" onChange={handleChange}>
                         {people}
                     </select>
@@ -55,7 +55,7 @@ export default function RoomFilter({rooms}) {
 
                 {/* room price */}
                 <div className="form-group">
-                    <label htmlFor="price">room price ${price}</label>
+                    <label htmlFor="price">Preço R${price}</label>
                     <input type="range" name="price" min={minPrice} max={maxPrice} id="price" value={price} onChange={handleChange} className="form-control" />
                 </div>
 
@@ -63,7 +63,7 @@ export default function RoomFilter({rooms}) {
 
                 {/* size */}
                 <div className="form-group">
-                    <label htmlFor="size">room size</label>
+                    <label htmlFor="size">Tamanho</label>
                     <div className="size-inputs">
                         <input type="number" name="minSize" id="size" value={minSize} onChange={handleChange} className="size-input"/>
                         <input type="number" name="maxSize" id="size" value={maxSize} onChange={handleChange} className="size-input"/>
@@ -74,11 +74,11 @@ export default function RoomFilter({rooms}) {
                 <div className="form-group">
                     <div className="single-extra">
                         <input type="checkbox" name="breakfast" id="breakfast" checked={breakfast} onChange={handleChange}/>
-                        <label htmlFor="breakfast">breakfast</label>
+                        <label htmlFor="breakfast">Café da manhã</label>
                     </div>
                     <div className="single-extra">
                         <input type="checkbox" name="pets" id="pets" checked={pets} onChange={handleChange}/>
-                        <label htmlFor="pets">pets</label>
+                        <label htmlFor="pets">Animais</label>
                     </div>
                 </div>
                 {/* end of extras */}
